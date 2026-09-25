@@ -1,0 +1,15 @@
+{
+  "name": "agentflow-root",
+  "version": "1.0.0",
+  "description": "AgentFlow - Autonomous AI Agent for Everyday Apps",
+  "scripts": {
+    "install:all": "cmd /c \"cd server && npm install\" && cmd /c \"cd client && npm install\"",
+    "build:server": "cmd /c \"cd server && npm run build\"",
+    "build:client": "cmd /c \"cd client && npm run build\"",
+    "build": "npm run build:server && npm run build:client",
+    "dev:server": "cmd /c \"cd server && npm run dev\"",
+    "dev:client": "cmd /c \"cd client && npm run dev\"",
+    "start:server": "cmd /c \"cd server && npm start\"",
+    "preview:client": "cmd /c \"cd client && npm run preview\""
+  }
+}
