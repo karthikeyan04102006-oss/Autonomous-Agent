@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "AgentFlow - Autonomous AI Agent for Everyday Apps",
   "scripts": {
-    "install:all": "cmd /c \"cd server && npm install\" && cmd /c \"cd client && npm install\"",
-    "build:server": "cmd /c \"cd server && npm run build\"",
-    "build:client": "cmd /c \"cd client && npm run build\"",
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "build:server": "npm run build --prefix server",
+    "build:client": "npm run build --prefix client",
     "build": "npm run build:server && npm run build:client",
-    "dev:server": "cmd /c \"cd server && npm run dev\"",
-    "dev:client": "cmd /c \"cd client && npm run dev\"",
-    "start:server": "cmd /c \"cd server && npm start\"",
-    "preview:client": "cmd /c \"cd client && npm run preview\""
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "start:server": "npm start --prefix server",
+    "preview:client": "npm run preview --prefix client"
   }
 }
