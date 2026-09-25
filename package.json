@@ -2,7 +2,12 @@
   "name": "agentflow-root",
   "version": "1.0.0",
   "description": "AgentFlow - Autonomous AI Agent for Everyday Apps",
+  "workspaces": [
+    "server",
+    "client"
+  ],
   "scripts": {
+    "postinstall": "npm install --prefix server && npm install --prefix client",
     "install:all": "npm install --prefix server && npm install --prefix client",
     "build:server": "npm run build --prefix server",
     "build:client": "npm run build --prefix client",
@@ -13,6 +18,7 @@
     "preview:client": "npm run preview --prefix client"
   },
   "dependencies": {
+    "@types/node": "^22.10.2",
     "typescript": "^5.7.2"
   }
 }
