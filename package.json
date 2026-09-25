@@ -11,5 +11,8 @@
     "dev:client": "npm run dev --prefix client",
     "start:server": "npm start --prefix server",
     "preview:client": "npm run preview --prefix client"
+  },
+  "dependencies": {
+    "typescript": "^5.7.2"
   }
 }
