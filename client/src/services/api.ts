@@ -1,6 +1,6 @@
 import type { Task, AgentStep, ActivityLog, Integration, Memory } from '../types';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = (import.meta.env.VITE_API_BASE_URL as string) || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' ? '/api' : 'http://localhost:5000/api');
 
 export const api = {
   // Check Backend Server & Database status
